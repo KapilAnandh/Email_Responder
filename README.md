@@ -50,6 +50,7 @@ An end-to-end, privacy-friendly **email responder** that:
    ├── requirements.txt            # Python dependencies
    ├── Dockerfile                  # Docker build definition
    └── README.md                   # Project documentation (overview, setup, usage)
+   ```
 
 ## Prerequisites
 
