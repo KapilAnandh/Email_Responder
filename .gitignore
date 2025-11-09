@@ -1,0 +1,45 @@
+@'
+# --- Python cache/artifacts ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+htmlcov/
+.pytest_cache/
+.coverage
+.coverage.*
+.cache/
+
+# --- Virtual environments ---
+er_env/
+.venv/
+venv/
+env/
+ENV/
+
+# --- Environment/secret files ---
+.env
+.env.*
+.env/
+*.env
+secrets.*
+*.pem
+*.key
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# --- Misc ---
+*.bak
+*.tmp
+~$*
+'@ | Set-Content -Encoding UTF8 .gitignore
