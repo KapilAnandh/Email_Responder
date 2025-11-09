@@ -22,24 +22,33 @@ An end-to-end, privacy-friendly **email responder** that:
 ---
 
 ##  Repository Structure
-├─ data/ # tokens and ChromaDB (persisted/mounted)
-├─ models/
-│ ├─ embeddings.py # OllamaEmbeddingFunction (calls /api/embeddings)
-│ └─ llm.py # LocalLLM wrapper (calls /api/generate)
-├─ src/
-│ ├─ agent.py # EmailAgent: draft, refine, memory-augmented reply
-│ ├─ classifier.py # classification facade over heuristic rules
-│ ├─ gmail_client.py # Gmail OAuth + list/get/send helpers
-│ ├─ memory.py # ChromaDB persistent vector store wrapper
-│ ├─ prompts.py # Prompt templates
-│ ├─ utils/
-│ │ ├─ logger.py # Rich logger facade
-│ │ └─ text.py # cleaning + heuristic classification
-│ └─ main.py # Click-based CLI (fetch/reply/memory/suggest)
-├─ .env # runtime config (optional in Docker; also set via env)
-├─ requirements.txt
-├─ Dockerfile
-└─ README.md
+Email_Responder/
+├── data/                             # Local storage (never commit secrets here)
+│   ├── chroma/                       # ChromaDB persisted data
+│   ├── credentials.json              # (ignored) Google OAuth client credentials
+│   └── token.json                    # (ignored) Gmail OAuth access/refresh tokens
+│
+├── models/                           # Local model wrapper modules
+│   ├── embeddings.py                 # OllamaEmbeddingFunction (calls /api/embeddings)
+│   └── llm.py                        # LocalLLM wrapper (calls /api/generate)
+│
+├── src/                              # Core source code
+│   ├── agent.py                      # EmailAgent: draft, refine, and memory-augmented replies
+│   ├── classifier.py                 # Classification logic (heuristics + rules)
+│   ├── gmail_client.py               # Gmail OAuth + list/get/send helper functions
+│   ├── memory.py                     # ChromaDB vector store wrapper
+│   ├── prompts.py                    # Prompt templates for the agent
+│   ├── utils/                        # Utility modules
+│   │   ├── logger.py                 # Rich logging wrapper
+│   │   └── text.py                   # Text cleaning and heuristic classification helpers
+│   └── main.py                       # CLI entry point (Click commands: fetch/reply/memory/suggest)
+│
+├── .env                              # Local runtime environment variables (ignored)
+├── .gitignore                        # Ignore secrets, venvs, caches, etc.
+├── requirements.txt                  # Python dependencies
+├── Dockerfile                        # Docker build definition
+└── README.md                         # Project documentation (overview, setup, usage)
+
 
 ## Prerequisites
 
