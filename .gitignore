@@ -43,3 +43,8 @@ Thumbs.db
 *.tmp
 ~$*
 '@ | Set-Content -Encoding UTF8 .gitignore
+
+# Add these:
+data/credentials.json
+data/token.json
+'@ | Add-Content -Encoding UTF8 .gitignore
