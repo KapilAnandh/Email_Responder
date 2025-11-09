@@ -103,3 +103,6 @@ python -m src.main reply 19a675ec --feedback "Be more confident and proactive"
 * ChromaDB stores drafts and contexts → memory-augmented suggestions.
 * Click CLI keeps workflow simple, auditable, and demo-friendly.
 * Rich logger for clear console output.
+
+Video Walkthrough
+Link : https://youtu.be/Y5Z7GvE-Y4A
