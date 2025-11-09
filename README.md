@@ -51,7 +51,7 @@ An end-to-end, privacy-friendly **email responder** that:
    ├── Dockerfile                  # Docker build definition
    └── README.md                   # Project documentation (overview, setup, usage)
    ```
-
+---
 ## Prerequisites
 
 1. **Ollama** installed on your host: <https://ollama.com>
